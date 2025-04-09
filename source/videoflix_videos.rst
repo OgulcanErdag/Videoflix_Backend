@@ -7,7 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   videoflix_videos.migrations
+   video_app.migrations
 
 Submodules
 ----------
@@ -15,7 +15,7 @@ Submodules
 videoflix\_videos.admin module
 ------------------------------
 
-.. automodule:: videoflix_videos.admin
+.. automodule:: video_app.admin
    :members:
    :show-inheritance:
    :undoc-members:
@@ -23,7 +23,7 @@ videoflix\_videos.admin module
 videoflix\_videos.apps module
 -----------------------------
 
-.. automodule:: videoflix_videos.apps
+.. automodule:: video_app.apps
    :members:
    :show-inheritance:
    :undoc-members:
@@ -31,7 +31,7 @@ videoflix\_videos.apps module
 videoflix\_videos.models module
 -------------------------------
 
-.. automodule:: videoflix_videos.models
+.. automodule:: video_app.models
    :members:
    :show-inheritance:
    :undoc-members:
@@ -39,7 +39,7 @@ videoflix\_videos.models module
 videoflix\_videos.signals module
 --------------------------------
 
-.. automodule:: videoflix_videos.signals
+.. automodule:: video_app.signals
    :members:
    :show-inheritance:
    :undoc-members:
@@ -47,7 +47,7 @@ videoflix\_videos.signals module
 videoflix\_videos.tasks module
 ------------------------------
 
-.. automodule:: videoflix_videos.tasks
+.. automodule:: video_app.tasks
    :members:
    :show-inheritance:
    :undoc-members:
@@ -55,7 +55,7 @@ videoflix\_videos.tasks module
 videoflix\_videos.tests module
 ------------------------------
 
-.. automodule:: videoflix_videos.tests
+.. automodule:: video_app.tests
    :members:
    :show-inheritance:
    :undoc-members:
@@ -63,7 +63,7 @@ videoflix\_videos.tests module
 videoflix\_videos.views module
 ------------------------------
 
-.. automodule:: videoflix_videos.views
+.. automodule:: video_app.views
    :members:
    :show-inheritance:
    :undoc-members:
@@ -71,7 +71,7 @@ videoflix\_videos.views module
 Module contents
 ---------------
 
-.. automodule:: videoflix_videos
+.. automodule:: video_app
    :members:
    :show-inheritance:
    :undoc-members:

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from unittest.mock import patch, MagicMock
-from videoflix_videos.models import Video
-from videoflix_videos.tasks import convert_to_hls, test_celery_task
+from video_app.models import Video
+from video_app.tasks import convert_to_hls, test_celery_task
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
 
@@ -16,10 +16,10 @@ class CeleryTasksTestCase(TestCase):
             genre="Action"
         )
 
-    @patch("videoflix_videos.tasks.subprocess.run")
+    @patch("video_app.tasks.subprocess.run")
     @patch("os.makedirs") 
     @patch("builtins.open", new_callable=MagicMock) 
-    @patch("videoflix_videos.tasks.logger")  
+    @patch("video_app.tasks.logger")  
     def test_convert_to_hls(self, mock_logger, mock_open, mock_makedirs, mock_subprocess):
         """Test HLS conversion task with all dependencies mocked"""
         mock_subprocess.return_value = MagicMock()

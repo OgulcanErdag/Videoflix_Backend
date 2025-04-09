@@ -1,7 +1,7 @@
 from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
 from django.contrib.auth.models import User
-from videoflix_videos.models import Video, UserVideoProgress
+from video_app.models import Video, UserVideoProgress
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
 

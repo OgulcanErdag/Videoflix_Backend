@@ -1,7 +1,7 @@
 from django.test import TestCase, RequestFactory
 from django.contrib.auth.models import User
-from videoflix_videos.models import Video, UserVideoProgress
-from videoflix_videos.api.serializers import VideoSerializer, VideoSerializerSingle, UserVideoProgressSerializer
+from video_app.models import Video, UserVideoProgress
+from video_app.api.serializers import VideoSerializer, VideoSerializerSingle, UserVideoProgressSerializer
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser

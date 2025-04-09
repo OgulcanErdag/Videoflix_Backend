@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
-from videoflix_auth.models import PasswordResetToken
+from auth_app.models import PasswordResetToken
 import uuid
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes

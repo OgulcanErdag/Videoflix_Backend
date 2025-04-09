@@ -1,6 +1,6 @@
 from celery import shared_task
 import subprocess
-from videoflix_videos.models import Video
+from video_app.models import Video
 import os
 import time
 import logging

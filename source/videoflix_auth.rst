@@ -7,9 +7,9 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   videoflix_auth.api
-   videoflix_auth.migrations
-   videoflix_auth.tests
+   auth_app.api
+   auth_app.migrations
+   auth_app.tests
 
 Submodules
 ----------
@@ -17,7 +17,7 @@ Submodules
 videoflix\_auth.admin module
 ----------------------------
 
-.. automodule:: videoflix_auth.admin
+.. automodule:: auth_app.admin
    :members:
    :show-inheritance:
    :undoc-members:
@@ -25,7 +25,7 @@ videoflix\_auth.admin module
 videoflix\_auth.apps module
 ---------------------------
 
-.. automodule:: videoflix_auth.apps
+.. automodule:: auth_app.apps
    :members:
    :show-inheritance:
    :undoc-members:
@@ -33,7 +33,7 @@ videoflix\_auth.apps module
 videoflix\_auth.models module
 -----------------------------
 
-.. automodule:: videoflix_auth.models
+.. automodule:: auth_app.models
    :members:
    :show-inheritance:
    :undoc-members:
@@ -41,7 +41,7 @@ videoflix\_auth.models module
 videoflix\_auth.tests\_main module
 ----------------------------------
 
-.. automodule:: videoflix_auth.tests_main
+.. automodule:: auth_app.tests_main
    :members:
    :show-inheritance:
    :undoc-members:
@@ -49,7 +49,7 @@ videoflix\_auth.tests\_main module
 videoflix\_auth.views module
 ----------------------------
 
-.. automodule:: videoflix_auth.views
+.. automodule:: auth_app.views
    :members:
    :show-inheritance:
    :undoc-members:
@@ -57,7 +57,7 @@ videoflix\_auth.views module
 Module contents
 ---------------
 
-.. automodule:: videoflix_auth
+.. automodule:: auth_app
    :members:
    :show-inheritance:
    :undoc-members:

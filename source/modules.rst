@@ -1,11 +1,11 @@
-videoflix_auth
+auth_app
 ==============
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_auth
+   auth_app
 
 
 
@@ -21,55 +21,55 @@ videoflix
 
 
 
-videoflix_auth.api
+auth_app.api
 ==================
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_auth.api
+   auth_app.api
 
 
-videoflix_auth.migrations
+auth_app.migrations
 =========================
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_auth.migrations
+   auth_app.migrations
 
 
 
-videoflix_auth.tests
+auth_app.tests
 ====================
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_auth.tests
+   auth_app.tests
 
 
-videoflix_videos
+video_app
 ================
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_videos
+   video_app
 
 
-videoflix_videos.migrations
+video_app.migrations
 ===========================
 
 .. toctree::
    :maxdepth: 2
    :caption: Modules
 
-   videoflix_videos.migrations
+   video_app.migrations
 
 
 

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from rest_framework.exceptions import ValidationError
 from django.contrib.auth.models import User
-from videoflix_auth.api.serializers import RegistrationSerializer
+from auth_app.api.serializers import RegistrationSerializer
 
 
 class RegistrationSerializerTestCase(TestCase):

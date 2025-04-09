@@ -7,7 +7,7 @@ Submodules
 videoflix\_videos.migrations.0001\_initial module
 -------------------------------------------------
 
-.. automodule:: videoflix_videos.migrations.0001_initial
+.. automodule:: video_app.migrations.0001_initial
    :members:
    :show-inheritance:
    :undoc-members:
@@ -15,7 +15,7 @@ videoflix\_videos.migrations.0001\_initial module
 videoflix\_videos.migrations.0002\_video\_genre module
 ------------------------------------------------------
 
-.. automodule:: videoflix_videos.migrations.0002_video_genre
+.. automodule:: video_app.migrations.0002_video_genre
    :members:
    :show-inheritance:
    :undoc-members:
@@ -23,7 +23,7 @@ videoflix\_videos.migrations.0002\_video\_genre module
 Module contents
 ---------------
 
-.. automodule:: videoflix_videos.migrations
+.. automodule:: video_app.migrations
    :members:
    :show-inheritance:
    :undoc-members:

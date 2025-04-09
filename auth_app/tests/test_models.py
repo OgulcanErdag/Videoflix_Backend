@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from videoflix_auth.models import PasswordResetToken 
+from auth_app.models import PasswordResetToken 
 from datetime import timedelta
 from django.utils.timezone import now
 

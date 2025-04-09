@@ -7,7 +7,7 @@ Submodules
 videoflix\_auth.api.serializers module
 --------------------------------------
 
-.. automodule:: videoflix_auth.api.serializers
+.. automodule:: auth_app.api.serializers
    :members:
    :show-inheritance:
    :undoc-members:
@@ -15,7 +15,7 @@ videoflix\_auth.api.serializers module
 videoflix\_auth.api.urls module
 -------------------------------
 
-.. automodule:: videoflix_auth.api.urls
+.. automodule:: auth_app.api.urls
    :members:
    :show-inheritance:
    :undoc-members:
@@ -23,7 +23,7 @@ videoflix\_auth.api.urls module
 videoflix\_auth.api.utils module
 --------------------------------
 
-.. automodule:: videoflix_auth.api.utils
+.. automodule:: auth_app.api.utils
    :members:
    :show-inheritance:
    :undoc-members:
@@ -31,7 +31,7 @@ videoflix\_auth.api.utils module
 videoflix\_auth.api.views module
 --------------------------------
 
-.. automodule:: videoflix_auth.api.views
+.. automodule:: auth_app.api.views
    :members:
    :show-inheritance:
    :undoc-members:
@@ -39,7 +39,7 @@ videoflix\_auth.api.views module
 Module contents
 ---------------
 
-.. automodule:: videoflix_auth.api
+.. automodule:: auth_app.api
    :members:
    :show-inheritance:
    :undoc-members:

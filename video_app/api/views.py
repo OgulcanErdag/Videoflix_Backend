@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from videoflix_videos.models import Video, UserVideoProgress
+from video_app.models import Video, UserVideoProgress
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from ..tasks import convert_to_hls
 from .serializers import VideoSerializer, VideoSerializerSingle, UserVideoProgressSerializer

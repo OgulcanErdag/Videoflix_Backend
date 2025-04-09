@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('viewed', models.BooleanField(default=False)),
                 ('last_viewed_at', models.DateTimeField(auto_now=True)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='video_progress', to=settings.AUTH_USER_MODEL)),
-                ('video', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='user_progress', to='videoflix_videos.video')),
+                ('video', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='user_progress', to='video_app.video')),
             ],
         ),
     ]

@@ -7,7 +7,7 @@ Submodules
 videoflix\_auth.tests.test\_models module
 -----------------------------------------
 
-.. automodule:: videoflix_auth.tests.test_models
+.. automodule:: auth_app.tests.test_models
    :members:
    :show-inheritance:
    :undoc-members:
@@ -15,7 +15,7 @@ videoflix\_auth.tests.test\_models module
 videoflix\_auth.tests.test\_serializers module
 ----------------------------------------------
 
-.. automodule:: videoflix_auth.tests.test_serializers
+.. automodule:: auth_app.tests.test_serializers
    :members:
    :show-inheritance:
    :undoc-members:
@@ -23,7 +23,7 @@ videoflix\_auth.tests.test\_serializers module
 videoflix\_auth.tests.test\_utils module
 ----------------------------------------
 
-.. automodule:: videoflix_auth.tests.test_utils
+.. automodule:: auth_app.tests.test_utils
    :members:
    :show-inheritance:
    :undoc-members:
@@ -31,7 +31,7 @@ videoflix\_auth.tests.test\_utils module
 videoflix\_auth.tests.test\_views module
 ----------------------------------------
 
-.. automodule:: videoflix_auth.tests.test_views
+.. automodule:: auth_app.tests.test_views
    :members:
    :show-inheritance:
    :undoc-members:
@@ -39,7 +39,7 @@ videoflix\_auth.tests.test\_views module
 Module contents
 ---------------
 
-.. automodule:: videoflix_auth.tests
+.. automodule:: auth_app.tests
    :members:
    :show-inheritance:
    :undoc-members:

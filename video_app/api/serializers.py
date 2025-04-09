@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.conf import settings
-from videoflix_videos.models import Video, UserVideoProgress
+from video_app.models import Video, UserVideoProgress
 from django.utils.encoding import iri_to_uri
 from django.conf import settings
 
