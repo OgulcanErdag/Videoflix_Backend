@@ -1,0 +1,43 @@
+# Python bytecode and cache
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# Django
+*.log
+logs/
+*.pot
+*.pyc
+staticfiles/
+media/
+local_settings.py
+
+# Test-related
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+videoflix/celery.py 
+
+_build/
+.DS_Store
+env/
+static/
+videos/hls/
+nohup.out
