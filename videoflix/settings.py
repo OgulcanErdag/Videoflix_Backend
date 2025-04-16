@@ -28,7 +28,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'vm.ogulcan-erdag.com', 'videoflix.ogulcan-erdag.com', '2.59.134.5']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'vm.ogulcan-erdag.com',
+ 'videoflix.ogulcan-erdag.com', 'ogulcan-erdag.developerakademie.net', 
+ 'videoflx.ogulcan-erdag.com', '2.59.134.5']
+
 # FRONTEND_BASE_URL = os.getenv("FRONTEND_BASE_URL", "http://localhost:4200")
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -45,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'auth_app.apps.AuthConfig',
-    'video_app'
+    'video_app.apps.VideoAppConfig'
     
 ]
 
@@ -68,7 +71,8 @@ CSRF_TRUSTED_ORIGINS = [
   'http://localhost:4200',
   'https://ogulcan-erdag.developerakademie.net',
   'https://vm.ogulcan-erdag.com',
-  'https://videoflix.ogulcan-erdag.com'
+  'https://videoflix.ogulcan-erdag.com',
+  'https://videoflx.ogulcan-erdag.com'
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -78,7 +82,8 @@ CORS_ALLOWED_ORIGINS = [
   'http://localhost:4200',
   'https://ogulcan-erdag.developerakademie.net',
   'https://vm.ogulcan-erdag.com',
-  'https://videoflix.ogulcan-erdag.com'
+  'https://videoflix.ogulcan-erdag.com',
+  'https://videoflx.ogulcan-erdag.com'
 ]
 
 ROOT_URLCONF = 'videoflix.urls'

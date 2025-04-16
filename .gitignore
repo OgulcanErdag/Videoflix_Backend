@@ -1,43 +1,70 @@
-# Python bytecode and cache
-*.pyc
+# ====================================
+# 🐍 Python Bytecode & Cache
+# ====================================
+*.py[cod]
+__pycache__/
 *.pyo
 *.pyd
-__pycache__/
-*.sqlite3
 
-# Virtual environment
+# ====================================
+# 🧪 Testing & Coverage
+# ====================================
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+junit*.xml
+coverage*.xml
+
+# ====================================
+# 📦 Environment & Secrets
+# ====================================
+.env
+.env.*
+*.env
+.envrc
+local_settings.py
+
+# ====================================
+# 📁 Virtual Environments
+# ====================================
 env/
 venv/
 ENV/
 
-# Django
+# ====================================
+# ⚙️ Django-related
+# ====================================
 *.log
 logs/
 *.pot
-*.pyc
+*.sqlite3
 staticfiles/
 media/
-local_settings.py
-
-# Test-related
-.cache/
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Environment variables
-.env
-
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-
-videoflix/celery.py 
-
-_build/
-.DS_Store
-env/
 static/
 videos/hls/
 nohup.out
+
+# ====================================
+# 🧾 Reports & Docs
+# ====================================
+tests_report/
+report.html
+htmlcov/
+_build/
+
+# ====================================
+# 💻 IDEs & Editors
+# ====================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.old
+.DS_Store
+
+# ====================================
+# 🐇 Celery Worker File (optional, falls temporär erstellt)
+# ====================================
+videoflix/celery.py

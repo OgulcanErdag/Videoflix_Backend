@@ -27,6 +27,14 @@ This is the backend for **Videoflix**, a video streaming platform. The backend i
 - Caching with Redis
 - API endpoints for frontend integration
 
+## 📚 Documentation
+
+ - The full backend documentation is generated using [Sphinx](https://www.sphinx-doc.org/).  
+ - You can find the HTML output locally under:
+
+  ```bash
+  build/html/index.html
+
 ## Setup & Installation
 
 ### Prerequisites
@@ -44,6 +52,7 @@ cd Videoflix_Backend
 ```
 
 ### Step 2: Environment Variables
+📄 Make sure not to commit your real `.env` file. Use `.env-template` to share only the structure.
 Rename the `.env-template` file to `.env`:
 ```sh
 mv .env-template .env
@@ -53,7 +62,7 @@ Then, open `.env` and fill in the necessary fields with your own data (database 
 ### Step 3: Create and Activate Virtual Environment
 ```sh
 python -m venv env
-source env/bin/activate  # On Windows use: env\Scripts\activate
+source env/bin/activate  # On Windows use: "env\Scripts\activate"
 ```
 
 ### Step 4: Install Dependencies
@@ -89,14 +98,23 @@ celery -A videoflix worker --loglevel=info
 ```
 
 ### Step 9: Create `celery.py` File
-You need to create your own `celery.py` file for Celery configuration.
+- You need to create your own `celery.py` file for Celery configuration.
++ The `videoflix/celery.py` file is already part of this project and configures Celery correctly.
++ You don't need to create anything – just ensure Redis is running before using Celery
 
 
 ## 📊 Tests Report  
-[View Tests Report](https://docs.ogulcan-erdag.com/videoflix-backend/report.html?sort=result)  
+🔒 Reports will be available after deployment under a dedicated subdomain.  
+🔧 The system already generates them via `pytest --html=...` and `coverage run`.  
+📁 You can find the local report at: `tests_report/report.html`  
+🛠️ Example (will be replaced post-deployment):  
+[View Tests Report](https://docs.ogulcan-erdag.com/videoflix-backend/report.html?sort=result)
 
 ## 📈 Tests Coverage Report  
-[View Coverage Report](https://docs.ogulcan-erdag.com/videoflix-backend/htmlcov/index.html)  
+🔒 Full test coverage will also be accessible post-deployment.  
+📁 Local coverage report: `htmlcov/index.html`  
+🛠️ Example (will be replaced post-deployment):  
+[View Coverage Report](https://docs.ogulcan-erdag.com/videoflix-backend/htmlcov/index.html)
 
 ## 🔗 API Endpoints  
 For detailed API documentation, check out [ENDPOINTS.md](ENDPOINTS.md).  
@@ -105,3 +123,7 @@ For detailed API documentation, check out [ENDPOINTS.md](ENDPOINTS.md).
 You can reach me through my portfolio:  
 [ogulcan-erdag.com](https://ogulcan-erdag.com) 
 
+---
+🧪 To install dependencies:
+```bash
+pip install -r requirements.txt

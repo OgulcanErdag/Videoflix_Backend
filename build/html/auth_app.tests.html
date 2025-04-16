@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>auth_app.tests package &mdash; Videoflix Backend 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="manage module" href="manage.html" />
+    <link rel="prev" title="auth_app.migrations package" href="auth_app.migrations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Videoflix Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Videoflix_Backend</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="auth_app.html">auth_app package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="auth_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="auth_app.api.html">auth_app.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="auth_app.migrations.html">auth_app.migrations package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">auth_app.tests package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.admin">auth_app.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.apps">auth_app.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.models">auth_app.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.signals">auth_app.signals module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.tests_main">auth_app.tests_main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app.views">auth_app.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_app.html#module-auth_app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video_app.html">video_app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="videoflix.html">videoflix package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Videoflix Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Videoflix_Backend</a></li>
+          <li class="breadcrumb-item"><a href="auth_app.html">auth_app package</a></li>
+      <li class="breadcrumb-item active">auth_app.tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/auth_app.tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="auth-app-tests-package">
+<h1>auth_app.tests package<a class="headerlink" href="#auth-app-tests-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-auth_app.tests.test_models">
+<span id="auth-app-tests-test-models-module"></span><h2>auth_app.tests.test_models module<a class="headerlink" href="#module-auth_app.tests.test_models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">PasswordResetTokenModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_is_valid_after_15_minutes">
+<span class="sig-name descname"><span class="pre">test_is_valid_after_15_minutes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.test_is_valid_after_15_minutes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_is_valid_after_15_minutes" title="Link to this definition"></a></dt>
+<dd><p>Test that is_valid() returns False after 15 minutes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_is_valid_within_15_minutes">
+<span class="sig-name descname"><span class="pre">test_is_valid_within_15_minutes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.test_is_valid_within_15_minutes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_is_valid_within_15_minutes" title="Link to this definition"></a></dt>
+<dd><p>Test that is_valid() returns True within 15 minutes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_token_creation">
+<span class="sig-name descname"><span class="pre">test_token_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.test_token_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_token_creation" title="Link to this definition"></a></dt>
+<dd><p>Test that a PasswordResetToken instance is created successfully.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_token_user_relationship">
+<span class="sig-name descname"><span class="pre">test_token_user_relationship</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.test_token_user_relationship"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_token_user_relationship" title="Link to this definition"></a></dt>
+<dd><p>Test that deleting the user deletes the associated token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_unique_token">
+<span class="sig-name descname"><span class="pre">test_unique_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_models.html#PasswordResetTokenModelTestCase.test_unique_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_models.PasswordResetTokenModelTestCase.test_unique_token" title="Link to this definition"></a></dt>
+<dd><p>Test that the token field is unique.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-auth_app.tests.test_serializers">
+<span id="auth-app-tests-test-serializers-module"></span><h2>auth_app.tests.test_serializers module<a class="headerlink" href="#module-auth_app.tests.test_serializers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_serializers.</span></span><span class="sig-name descname"><span class="pre">RegistrationSerializerTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_duplicate_email_raises_error">
+<span class="sig-name descname"><span class="pre">test_duplicate_email_raises_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase.test_duplicate_email_raises_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_duplicate_email_raises_error" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_password_mismatch_raises_error">
+<span class="sig-name descname"><span class="pre">test_password_mismatch_raises_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase.test_password_mismatch_raises_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_password_mismatch_raises_error" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_valid_data_creates_user">
+<span class="sig-name descname"><span class="pre">test_valid_data_creates_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase.test_valid_data_creates_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_valid_data_creates_user" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_weak_password_raises_error">
+<span class="sig-name descname"><span class="pre">test_weak_password_raises_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_serializers.html#RegistrationSerializerTestCase.test_weak_password_raises_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_serializers.RegistrationSerializerTestCase.test_weak_password_raises_error" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-auth_app.tests.test_utils">
+<span id="auth-app-tests-test-utils-module"></span><h2>auth_app.tests.test_utils module<a class="headerlink" href="#module-auth_app.tests.test_utils" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_utils.EmailUtilsTestCase">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_utils.</span></span><span class="sig-name descname"><span class="pre">EmailUtilsTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_utils.html#EmailUtilsTestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_utils.EmailUtilsTestCase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_utils.EmailUtilsTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_utils.html#EmailUtilsTestCase.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_utils.EmailUtilsTestCase.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_utils.EmailUtilsTestCase.test_send_password_reset_email">
+<span class="sig-name descname"><span class="pre">test_send_password_reset_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_send</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_utils.html#EmailUtilsTestCase.test_send_password_reset_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_utils.EmailUtilsTestCase.test_send_password_reset_email" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_utils.EmailUtilsTestCase.test_send_welcome_email">
+<span class="sig-name descname"><span class="pre">test_send_welcome_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_send</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_utils.html#EmailUtilsTestCase.test_send_welcome_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_utils.EmailUtilsTestCase.test_send_welcome_email" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-auth_app.tests.test_views">
+<span id="auth-app-tests-test-views-module"></span><h2>auth_app.tests.test_views module<a class="headerlink" href="#module-auth_app.tests.test_views" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.ActivateAccountViewTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">ActivateAccountViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#ActivateAccountViewTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.ActivateAccountViewTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.ActivateAccountViewTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#ActivateAccountViewTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.ActivateAccountViewTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.ActivateAccountViewTests.test_activate_account_invalid_token">
+<span class="sig-name descname"><span class="pre">test_activate_account_invalid_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#ActivateAccountViewTests.test_activate_account_invalid_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.ActivateAccountViewTests.test_activate_account_invalid_token" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.ActivateAccountViewTests.test_activate_account_success">
+<span class="sig-name descname"><span class="pre">test_activate_account_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#ActivateAccountViewTests.test_activate_account_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.ActivateAccountViewTests.test_activate_account_success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.ActivateAccountViewTests.test_user_does_not_exist">
+<span class="sig-name descname"><span class="pre">test_user_does_not_exist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#ActivateAccountViewTests.test_user_does_not_exist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.ActivateAccountViewTests.test_user_does_not_exist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">LoginViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests.test_login_inactive_user">
+<span class="sig-name descname"><span class="pre">test_login_inactive_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests.test_login_inactive_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests.test_login_inactive_user" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests.test_login_invalid_credentials">
+<span class="sig-name descname"><span class="pre">test_login_invalid_credentials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests.test_login_invalid_credentials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests.test_login_invalid_credentials" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests.test_login_nonexistent_user">
+<span class="sig-name descname"><span class="pre">test_login_nonexistent_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests.test_login_nonexistent_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests.test_login_nonexistent_user" title="Link to this definition"></a></dt>
+<dd><p>Test login for a user that does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.LoginViewTests.test_login_success">
+<span class="sig-name descname"><span class="pre">test_login_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#LoginViewTests.test_login_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.LoginViewTests.test_login_success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">PasswordResetConfirmTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_or_expired_token">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_invalid_or_expired_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_invalid_or_expired_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_or_expired_token" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_token">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_invalid_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_invalid_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_token" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_token_is_valid">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_invalid_token_is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_invalid_token_is_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_invalid_token_is_valid" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_missing_password_fields">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_missing_password_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_missing_password_fields"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_missing_password_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_passwords_dont_match">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_passwords_dont_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_passwords_dont_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_passwords_dont_match" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_success">
+<span class="sig-name descname"><span class="pre">test_password_reset_confirm_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetConfirmTests.test_password_reset_confirm_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetConfirmTests.test_password_reset_confirm_success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">PasswordResetTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetTests.test_password_reset_request_invalid_email">
+<span class="sig-name descname"><span class="pre">test_password_reset_request_invalid_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetTests.test_password_reset_request_invalid_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetTests.test_password_reset_request_invalid_email" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.PasswordResetTests.test_password_reset_request_success">
+<span class="sig-name descname"><span class="pre">test_password_reset_request_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#PasswordResetTests.test_password_reset_request_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.PasswordResetTests.test_password_reset_request_success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.RegistrationViewTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">RegistrationViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#RegistrationViewTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.RegistrationViewTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.RegistrationViewTests.test_registration_existing_email">
+<span class="sig-name descname"><span class="pre">test_registration_existing_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#RegistrationViewTests.test_registration_existing_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.RegistrationViewTests.test_registration_existing_email" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.RegistrationViewTests.test_registration_passwords_dont_match">
+<span class="sig-name descname"><span class="pre">test_registration_passwords_dont_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#RegistrationViewTests.test_registration_passwords_dont_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.RegistrationViewTests.test_registration_passwords_dont_match" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.RegistrationViewTests.test_registration_success">
+<span class="sig-name descname"><span class="pre">test_registration_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#RegistrationViewTests.test_registration_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.RegistrationViewTests.test_registration_success" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.TokenLoginViewTest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">auth_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">TokenLoginViewTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#TokenLoginViewTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.TokenLoginViewTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">APITestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.TokenLoginViewTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#TokenLoginViewTest.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.TokenLoginViewTest.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.TokenLoginViewTest.test_invalid_token_login">
+<span class="sig-name descname"><span class="pre">test_invalid_token_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#TokenLoginViewTest.test_invalid_token_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.TokenLoginViewTest.test_invalid_token_login" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.TokenLoginViewTest.test_missing_token_in_request">
+<span class="sig-name descname"><span class="pre">test_missing_token_in_request</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#TokenLoginViewTest.test_missing_token_in_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.TokenLoginViewTest.test_missing_token_in_request" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="auth_app.tests.test_views.TokenLoginViewTest.test_valid_token_login">
+<span class="sig-name descname"><span class="pre">test_valid_token_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/auth_app/tests/test_views.html#TokenLoginViewTest.test_valid_token_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#auth_app.tests.test_views.TokenLoginViewTest.test_valid_token_login" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-auth_app.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-auth_app.tests" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="auth_app.migrations.html" class="btn btn-neutral float-left" title="auth_app.migrations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="manage.html" class="btn btn-neutral float-right" title="manage module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ogulcan Erdag.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

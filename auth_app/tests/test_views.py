@@ -90,7 +90,7 @@ class LoginViewTests(TestCase):
 
     def test_login_success(self):
         url = reverse('login')
-        data = {"email": "testuser", "password": "Password123"}
+        data = {"email": "testuser@example.com", "password": "Password123"}
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, 200)
         self.assertIn("token", response.json())
@@ -105,7 +105,7 @@ class LoginViewTests(TestCase):
         self.user.is_active = False
         self.user.save()
         url = reverse('login')
-        data = {"email": "testuser", "password": "Password123"}
+        data = {"email": "testuser@example.com", "password": "Password123"}
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, 403)
         
@@ -123,6 +123,8 @@ class PasswordResetTests(TestCase):
 
     def setUp(self):
         self.user = User.objects.create_user(email="testuser@example.com", username="testuser", password="Password123")
+        self.user.is_active = True  
+        self.user.save()
 
     def test_password_reset_request_success(self):
         url = reverse('password_reset')
@@ -223,8 +225,12 @@ class PasswordResetConfirmTests(TestCase):
 class TokenLoginViewTest(APITestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(email="testuser@example.com", username="testuser", password="Password123")
-        self.token_object = Token.objects.create(user=self.user)
+        self.user = User.objects.create_user(
+            email="testuser@example.com",
+            username="testuser",
+            password="Password123"
+        )
+        self.token_object, _ = Token.objects.get_or_create(user=self.user) 
         self.valid_token = self.token_object.key
         self.url = reverse('token_login')
 

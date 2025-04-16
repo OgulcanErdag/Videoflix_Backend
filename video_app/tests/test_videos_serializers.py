@@ -1,12 +1,12 @@
 from django.test import TestCase, RequestFactory
 from django.contrib.auth.models import User
 from video_app.models import Video, UserVideoProgress
-from video_app.api.serializers import VideoSerializer, VideoSerializerSingle, UserVideoProgressSerializer
+from video_app.api.serializers import VideoListSerializer, VideoDetailSerializer, UserVideoProgressSerializer
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
 from rest_framework.test import APIRequestFactory
-
+from urllib.parse import urljoin
 
 class VideoSerializerTestCase(TestCase):
     def setUp(self):
@@ -45,7 +45,7 @@ class VideoSerializerTestCase(TestCase):
         """Test VideoSerializer returns user progress when authenticated"""
         request = self.factory.get("/")
         request.user = self.user
-        serializer = VideoSerializer(instance=self.video_with_hls, context={"request": request})
+        serializer = VideoListSerializer(instance=self.video_with_hls, context={"request": request})
         data = serializer.data
         expected_progress = UserVideoProgressSerializer(self.progress).data
         self.assertEqual(data["title"], self.video_with_hls.title)
@@ -55,7 +55,7 @@ class VideoSerializerTestCase(TestCase):
       """Test VideoSerializer returns None for user_progress when unauthenticated"""
       request = self.factory.get("/")
       request.user = AnonymousUser()
-      serializer = VideoSerializer(instance=self.video_with_hls, context={"request": request})
+      serializer = VideoListSerializer(instance=self.video_with_hls, context={"request": request})
       data = serializer.data
       self.assertEqual(data["title"], self.video_with_hls.title)
       self.assertIsNone(data["user_progress"])
@@ -66,10 +66,10 @@ class VideoSerializerTestCase(TestCase):
         request = self.factory.get("/")
         request.user = self.user
 
-        serializer = VideoSerializerSingle(instance=self.video_with_hls, context={"request": request})
+        serializer = VideoDetailSerializer(instance=self.video_with_hls, context={"request": request})
         data = serializer.data
 
-        expected_url = f"https://vm.ogulcan-erdag.com{settings.MEDIA_URL}videos/hls/{self.video_with_hls.id}/master.m3u8"
+        expected_url = urljoin("http://127.0.0.1:8000", f"{settings.MEDIA_URL}videos/hls/{self.video_with_hls.id}/master.m3u8")
         expected_progress = UserVideoProgressSerializer(self.progress).data
 
         self.assertEqual(data["title"], self.video_with_hls.title)

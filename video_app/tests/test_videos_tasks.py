@@ -4,6 +4,8 @@ from video_app.models import Video
 from video_app.tasks import convert_to_hls, test_celery_task
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
+from unittest.mock import call
+from django.conf import settings
 
 class CeleryTasksTestCase(TestCase):
     def setUp(self):
@@ -23,11 +25,16 @@ class CeleryTasksTestCase(TestCase):
     def test_convert_to_hls(self, mock_logger, mock_open, mock_makedirs, mock_subprocess):
         """Test HLS conversion task with all dependencies mocked"""
         mock_subprocess.return_value = MagicMock()
+        
         convert_to_hls(self.video.id)
-        mock_makedirs.assert_called_once() 
-        self.assertEqual(mock_subprocess.call_count, 4) 
+        mock_makedirs.assert_has_calls([
+            call(os.path.join(settings.MEDIA_ROOT, "videos", "hls", str(self.video.id)), exist_ok=True),
+            call(os.path.join(settings.MEDIA_ROOT,"thumbnails"), exist_ok=True)
+        ], any_order=True)
+
+        self.assertEqual(mock_makedirs.call_count, 2) 
         mock_open.assert_called_once_with(
-            os.path.join('videos', 'hls', str(self.video.id), 'master.m3u8'), 'w'
+            os.path.join(settings.MEDIA_ROOT, 'videos', 'hls', str(self.video.id), 'master.m3u8'), 'w'
         )
         mock_logger.info.assert_any_call(f"Starting HLS conversion for video ID: {self.video.id}")
         mock_logger.info.assert_any_call(f"Successfully completed HLS conversion for video ID: {self.video.id}")

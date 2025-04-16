@@ -5,19 +5,17 @@ from django.contrib.auth.models import User
 class Video(models.Model):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='videos/originals/') 
-    thumbnail = models.FileField(upload_to='thumbnails/')  
+    thumbnail = models.FileField(upload_to='thumbnails/', blank=True, null=True)  
     description = models.TextField(blank=True)
     hls_master_playlist = models.FileField(upload_to='videos/hls/', blank=True, null=True)
     genre = models.CharField(max_length=50, blank=True)
+    is_featured = models.BooleanField(default=False)  
+    is_trending = models.BooleanField(default=False)  
+    is_new = models.BooleanField(default=False)       
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """
-        Returns the string representation of the Video instance, which is the title of the video.
-        """
-
         return self.title
-
 
 class UserVideoProgress(models.Model):
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='video_progress')
@@ -27,11 +25,6 @@ class UserVideoProgress(models.Model):
     last_viewed_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        """
-        Returns a string representation of the UserVideoProgress instance, 
-        which includes the username of the user and the title of the video.
-        """
-
         return f"{self.user.username} - {self.video.title}"
 
 

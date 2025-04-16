@@ -1,19 +1,28 @@
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from .models import Video
+import os
+import shutil
+from django.conf import settings
 from .tasks import convert_to_hls
+import logging
+logger = logging.getLogger(__name__)
 
 @receiver(post_save, sender=Video)
 def trigger_hls_conversion(sender, instance, created, **kwargs):
-    """
-    Signal receiver that triggers HLS conversion for a video when it is created.
-
-    Args:
-        sender (Model): The model class that sent the signal.
-        instance (Video): The actual instance being saved.
-        created (bool): A boolean; True if a new record was created.
-        **kwargs: Additional keyword arguments.
-    """
-
     if created:
+        logger.info(f"[Signal] Triggering HLS conversion for video id: {instance.id}")
         convert_to_hls.delay(instance.id)
+
+@receiver(post_delete, sender=Video)       
+def auto_delete_files_on_video_delete(sender, instance, **kwargs):
+   
+    if instance.file and os.path.isfile(instance.file.path):
+        os.remove(instance.file.path)
+
+    hls_dir = os.path.join(instance.file.storage.location, 'videos', 'hls', str(instance.id))
+    if os.path.isdir(hls_dir):
+        shutil.rmtree(hls_dir)
+
+    if instance.thumbnail and os.path.isfile(instance.thumbnail.path):
+        os.remove(instance.thumbnail.path)

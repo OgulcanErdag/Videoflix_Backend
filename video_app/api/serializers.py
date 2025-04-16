@@ -10,7 +10,7 @@ class UserVideoProgressSerializer(serializers.ModelSerializer):
         model = UserVideoProgress
         fields = ['last_viewed_position', 'viewed', 'last_viewed_at']
 
-class VideoSerializer(serializers.ModelSerializer):
+class VideoListSerializer(serializers.ModelSerializer):
     user_progress = serializers.SerializerMethodField()
 
     class Meta:
@@ -18,9 +18,6 @@ class VideoSerializer(serializers.ModelSerializer):
         fields = ['title', 'file', 'thumbnail', 'description', 'hls_master_playlist', 'uploaded_at', 'user_progress', 'id', 'genre']
 
     def get_user_progress(self, obj):
-        """
-        Return the user's progress for the given video as a serialized UserVideoProgress, or None if the user is not authenticated or no progress is found.
-        """
         request = self.context.get('request')
         if request:
             print(f"Request user: {request.user}, Authenticated: {request.user.is_authenticated}")
@@ -32,7 +29,7 @@ class VideoSerializer(serializers.ModelSerializer):
         return None
     
     
-class VideoSerializerSingle(serializers.ModelSerializer):
+class VideoDetailSerializer(serializers.ModelSerializer):
     user_progress = serializers.SerializerMethodField()
     hls_master_playlist_url = serializers.SerializerMethodField()
 
@@ -46,28 +43,12 @@ class VideoSerializerSingle(serializers.ModelSerializer):
         return None
 
     def get_user_progress(self, obj):
-        """
-        Retrieve the user's progress for the specified video.
-
-        This method checks if the request context contains an authenticated user.
-        If the user is authenticated and has progress related to the given video, 
-        it returns the serialized progress data. If no progress is found or the 
-        user is not authenticated, it returns None.
-
-        Args:
-            obj (Video): The video object for which to retrieve user progress.
-
-        Returns:
-            dict or None: Serialized user progress data if available, otherwise None.
-        """
-
         request = self.context.get('request')
         if request and request.user.is_authenticated:
             progress = UserVideoProgress.objects.filter(user=request.user, video=obj).first()
             if progress:
                 return UserVideoProgressSerializer(progress).data
         return None
-
 
 class UserVideoProgressSerializer(serializers.ModelSerializer):
     class Meta:
