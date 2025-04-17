@@ -28,7 +28,7 @@ class UserRegistrationView(APIView):
             send_welcome_email(
                 user_email=user.email,
                 user_name=user.username,
-                activation_link=f"http://localhost:4200/activate-account/{uid}/{token}/"
+                activation_link=f"https://videoflx.ogulcan-erdag.com/activate-account/{uid}/{token}/"
             )
             return Response({
                 'message': 'You registered successfully',
@@ -102,7 +102,7 @@ class RequestPasswordResetView(APIView):
             user = User.objects.get(email=email)
             token = str(uuid.uuid4()) 
             PasswordResetToken.objects.create(user=user, token=token)
-            reset_link = f"http://localhost:4200/reset-password/confirm/{token}/"
+            reset_link = f"https://videoflx.ogulcan-erdag.com/reset-password/confirm/{token}/"
             send_password_reset_email(
                 user_email=user.email,
                 user_name=user.username,
