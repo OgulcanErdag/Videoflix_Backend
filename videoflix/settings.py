@@ -126,21 +126,20 @@ DATABASES = {
 
 REDIS_URL = os.getenv('REDIS_URL', 'redis://127.0.0.1:6379/1')
 REDIS_PASSWORD = os.getenv('REDIS_PASSWORD', None)
+CELERY_BROKER_URL = REDIS_URL
 
-parsed_url = urlparse(REDIS_URL)
+
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', REDIS_URL)
 
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_TASK_DEFAULT_QUEUE = 'default'
 CELERY_TASK_SERIALIZER = 'json'
-if REDIS_PASSWORD:
-    CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
-else:
-    CELERY_BROKER_URL = REDIS_URL
 
+# Redis Cache Setup
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': CELERY_BROKER_URL,
+        'LOCATION': REDIS_URL,
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'PASSWORD': REDIS_PASSWORD,
@@ -183,7 +182,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/root/projects/VideoflixBackend/static/'
+STATIC_ROOT = '/root/projects/Videoflix_Backend/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
